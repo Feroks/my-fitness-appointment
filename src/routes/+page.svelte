@@ -69,17 +69,17 @@
 				<input
 					id="date-input"
 					type="date"
-					class="dark:[color-scheme:dark]"
 					min={format(startOfWeek(new Date()), 'yyyy-MM-dd')}
 					max={format(addMonths(startOfWeek(new Date()), 1), 'yyyy-MM-dd')}
 					value={format(data.date, 'yyyy-MM-dd')}
 					on:change={onDateChange}
+					class="w-full dark:[color-scheme:dark]"
 				/>
 			</div>
 
 			<div class="flex flex-col gap-1">
 				<label for="club-input">Club</label>
-				<select id="club-input" bind:value={selectedClub} on:change={onClubChange}>
+				<select id="club-input" bind:value={selectedClub} on:change={onClubChange} class="w-full">
 					<option value={null}></option>
 					{#each MyFitnessClubs as club}
 						<option value={club}>{club}</option>
@@ -89,7 +89,12 @@
 
 			<div class="flex flex-col gap-1">
 				<label for="training-input">Training</label>
-				<select id="training-input" bind:value={selectedTraining} on:change={onTrainingChange}>
+				<select
+					id="training-input"
+					bind:value={selectedTraining}
+					on:change={onTrainingChange}
+					class="w-full"
+				>
 					<option value={null}></option>
 					{#each MyFitnessTrainings as training}
 						<option value={training}>{training}</option>

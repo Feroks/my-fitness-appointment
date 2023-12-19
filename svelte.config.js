@@ -10,8 +10,8 @@ const config = {
 			precompress: true
 		}),
 		paths: {
-            base: process.env.NODE_ENV === 'production' ? '/my-fitness-appointment' : '',
-        },
+			base: process.env.NODE_ENV === 'production' ? '/my-fitness-appointment' : ''
+		},
 		alias: {
 			$components: './src/components',
 			$helpers: './src/helpers',

@@ -1,0 +1,42 @@
+{
+	"name": "my-fitness-appointment",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev --open",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test": "vitest",
+		"lint": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-organize-imports --plugin=prettier-plugin-tailwindcss --check . && eslint .",
+		"format": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-organize-imports --plugin=prettier-plugin-tailwindcss --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.0",
+		"@sveltejs/kit": "^2.0.3",
+		"@sveltejs/vite-plugin-svelte": "^3.0.1",
+		"@tailwindcss/forms": "^0.5.7",
+		"@total-typescript/ts-reset": "^0.5.1",
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"cssnano": "^6.0.2",
+		"date-fns": "^2.30.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.35.1",
+		"node-html-parser": "^6.1.11",
+		"prettier": "^3.1.1",
+		"prettier-plugin-organize-imports": "^3.2.4",
+		"prettier-plugin-svelte": "^3.1.2",
+		"prettier-plugin-tailwindcss": "^0.5.9",
+		"svelte": "^4.2.8",
+		"svelte-check": "^3.6.2",
+		"tailwindcss": "^3.3.7",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vitest": "^1.1.0"
+	},
+	"type": "module"
+}

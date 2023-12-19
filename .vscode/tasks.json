@@ -18,6 +18,14 @@
 		},
 		{
 			"type": "npm",
+			"script": "deploy",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: deploy",
+			"detail": "npm: deploy"
+		},
+		{
+			"type": "npm",
 			"script": "typesafe-i18n",
 			"group": "build",
 			"problemMatcher": [],

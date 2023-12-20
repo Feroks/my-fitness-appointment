@@ -110,7 +110,7 @@
 		{:then schedule}
 			<div class="overflow-auto">
 				<table class="h-full w-full">
-					<thead class="sticky top-0 z-10 hidden dark:bg-black sm:table-header-group">
+					<thead class="sticky top-0 z-10 hidden sm:table-header-group dark:bg-black">
 						<tr>
 							<th>Date</th>
 							<th>Day</th>
@@ -125,7 +125,7 @@
 						<!-- Backend api does not allow filtering by training. Therefore we filter it here -->
 						{#each schedule.filter((x) => (!selectedTraining || x.training === selectedTraining) && (!selectedClub || x.club === selectedClub)) as event (event.id)}
 							<tr
-								class="mb-4 flex cursor-pointer flex-col whitespace-nowrap hover:dark:bg-neutral-500 sm:table-row"
+								class="mb-4 flex cursor-pointer flex-col whitespace-nowrap sm:table-row hover:dark:bg-neutral-500"
 								on:click={() => openEvent(event.id)}
 							>
 								<td>{format(event.date, 'dd.MM.yyyy HH:mm')}</td>

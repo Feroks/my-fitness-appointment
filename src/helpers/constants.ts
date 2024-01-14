@@ -3,7 +3,6 @@ export const DateParameterName = 'date';
 export const ClubParameterName = 'club';
 export const TrainingParameterName = 'training';
 export const DateParameterFormat = 'yyyyMMdd';
-export const ScheduleParameterWeekNumber = 'weekNumber';
 
 export const MyFitnessClubs = [
 	'Aleja',

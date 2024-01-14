@@ -15,7 +15,7 @@
 		"format": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-organize-imports --plugin=prettier-plugin-tailwindcss --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^3.0.1",
+		"@sveltejs/adapter-cloudflare": "^3.0.2",
 		"@sveltejs/kit": "^2.3.2",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"@tailwindcss/forms": "^0.5.7",
@@ -27,7 +27,6 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"gh-pages": "^6.1.1",
 		"node-html-parser": "^6.1.12",
 		"prettier": "^3.2.2",
 		"prettier-plugin-organize-imports": "^3.2.4",

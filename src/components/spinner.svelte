@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <svg
 	aria-hidden="true"
 	class="mr-2 h-16 w-16 animate-spin fill-red-600 text-gray-200 dark:text-gray-600"

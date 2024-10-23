@@ -14,10 +14,14 @@
 	import { goto } from '$app/navigation';
 	import Spinner from '$components/spinner.svelte';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
 
-	let selectedClub: string | null = data.url.searchParams.get(ClubParameterName);
-	let selectedTraining: string | null = data.url.searchParams.get(TrainingParameterName);
+	let { data }: Props = $props();
+
+	let selectedClub: string | null = $state(data.url.searchParams.get(ClubParameterName));
+	let selectedTraining: string | null = $state(data.url.searchParams.get(TrainingParameterName));
 
 	async function onDateChange(
 		event: Event & { currentTarget: EventTarget & HTMLInputElement }
@@ -72,14 +76,14 @@
 					min={format(startOfWeek(new Date()), 'yyyy-MM-dd')}
 					max={format(addMonths(startOfWeek(new Date()), 1), 'yyyy-MM-dd')}
 					value={format(data.date, 'yyyy-MM-dd')}
-					on:change={onDateChange}
+					onchange={onDateChange}
 					class="w-full dark:[color-scheme:dark]"
 				/>
 			</div>
 
 			<div class="flex flex-col gap-1">
 				<label for="club-input">Club</label>
-				<select id="club-input" bind:value={selectedClub} on:change={onClubChange} class="w-full">
+				<select id="club-input" bind:value={selectedClub} onchange={onClubChange} class="w-full">
 					<option value={null}></option>
 					{#each MyFitnessClubs as club}
 						<option value={club}>{club}</option>
@@ -92,7 +96,7 @@
 				<select
 					id="training-input"
 					bind:value={selectedTraining}
-					on:change={onTrainingChange}
+					onchange={onTrainingChange}
 					class="w-full"
 				>
 					<option value={null}></option>
@@ -126,7 +130,7 @@
 						{#each schedule.filter((x) => (!selectedTraining || x.training === selectedTraining) && (!selectedClub || x.club === selectedClub)) as event (event.id)}
 							<tr
 								class="mb-4 flex cursor-pointer flex-col whitespace-nowrap hover:dark:bg-neutral-500 sm:table-row"
-								on:click={() => openEvent(event.id)}
+								onclick={() => openEvent(event.id)}
 							>
 								<td>{format(event.date, 'dd.MM.yyyy HH:mm')}</td>
 								<td>{format(event.date, 'EEEE')}</td>

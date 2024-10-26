@@ -1,6 +1,6 @@
 import type { MyFitnessEvent } from '$models';
 import { addHours, addMinutes, getISOWeek, parse } from 'date-fns';
-import { HTMLElement, parse as parseHtml } from 'node-html-parser';
+import { type HTMLElement, parse as parseHtml } from 'node-html-parser';
 import { DateParameterFormat, DateParameterName, MyFitnessUrl } from '../helpers/constants';
 
 const timeRegex: RegExp = /\b(\d{2}:\d{2})\b/;
